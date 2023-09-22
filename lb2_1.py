@@ -8,13 +8,13 @@ try:
         fin.append(i.split(' '))
         print (i)
     print('----------------------------------------')
-    rik1=int(input("Введіть початок діапазону (рік випуска) ->"))
-    rik2=int(input("Введіть кінець діапазону (рік випуска) ->"))
+    rikn=int(input("Введіть початок діапазону (рік випуска) ->"))
+    rikk=int(input("Введіть кінець діапазону (рік випуска) ->"))
     virobnik=input("Введіть частину назви виробника ->")
     print('----------------------------------------')     
     fout=[]
     for j in fin:
-        if int(j[3])>=rik1 and int(j[3])<=rik2 and j[1].find(virobnik)>=0:
+        if int(j[3])>=rikn and int(j[3])<=rikk and j[1].find(virobnik)>=0:
             fout.append(' '.join(j))
     file_write = open('auto_rez.txt','w')
     for j in fout:
